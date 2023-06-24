@@ -4,4 +4,4 @@ This project is a Java implementation of the classic game Snake and Ladders usin
 
 # In Game ScreenShot
 
-<img width="1280" alt="Screenshot 2023-06-21 231957" src="https://github.com/Sourav20341/Snakes_And_Ladders/blob/main/Snake_Ladder_1.pn)https://github.com/Sourav20341/Snakes_And_Ladders/blob/main/Snake_Ladder_1.pn">
+<img width="1280" alt="Snake_Ladder_1.png" src="https://github.com/Sourav20341/Snakes_And_Ladders/blob/main/Snake_Ladder_1.pn)https://github.com/Sourav20341/Snakes_And_Ladders/blob/main/Snake_Ladder_1.pn">
