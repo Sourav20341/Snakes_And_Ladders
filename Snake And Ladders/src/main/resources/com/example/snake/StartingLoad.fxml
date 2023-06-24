@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<VBox prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.snake.HelloController">
+   <children>
+      <AnchorPane prefHeight="300.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="Loading" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Download-Snakes-and-Ladders-dice-board-game-21-APK-For-Android.png" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.82">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </Bloom>
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <InnerShadow>
+         <color>
+            <Color red="0.17659395933151245" green="0.8100000023841858" blue="0.04859999939799309" />
+         </color>
+      </InnerShadow>
+   </effect>
+</VBox>

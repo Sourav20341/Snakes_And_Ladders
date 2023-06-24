@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.snake.Game">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="600.0" fitWidth="300.0" layoutX="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@pexels-artem-saranin-1547813.jpg" />
+               </image>
+               <effect>
+                  <InnerShadow choke="0.41" height="100.495" radius="49.758750000000006" width="100.54">
+                     <input>
+                        <Bloom threshold="0.0">
+                           <input>
+                              <Shadow>
+                                 <color>
+                                    <Color red="0.11578947305679321" green="0.0175828468054533" blue="0.0175828468054533" />
+                                 </color>
+                              </Shadow>
+                           </input>
+                        </Bloom>
+                     </input>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@istockphoto-531466314-612x612.jpg" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.88">
+                     <input>
+                        <ColorAdjust contrast="1.0" />
+                     </input>
+                  </Bloom>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="ImagePlayer1" fitHeight="150.0" fitWidth="200.0" layoutX="684.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Snake-Tattoo-Free-Download-PNG.png" />
+               </image>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.027000000700354576" green="0.5500473976135254" blue="0.8999999761581421" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ImageView>
+            <Button fx:id="Dice" layoutX="672.0" layoutY="315.0" mnemonicParsing="false" onAction="#throwDice" prefHeight="40.0" prefWidth="142.0" text="D I C E" visible="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.05" fraction="0.51" topOpacity="1.0">
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow>
+                                 <color>
+                                    <Color red="0.8833333253860474" green="1.0" opacity="0.6200000047683716" />
+                                 </color>
+                              </Shadow>
+                           </bumpInput>
+                           <light>
+                              <Light.Distant>
+                                 <color>
+                                    <Color red="0.5905172228813171" blue="1.0" />
+                                 </color>
+                              </Light.Distant>
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Reflection>
+               </effect>
+            </Button>
+            <ImageView fx:id="MainMenu" accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" layoutX="657.0" onMousePressed="#showDialog" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PicsArt_12-07-12.15.20.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ImagePlayer2" fitHeight="150.0" fitWidth="200.0" layoutX="684.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PikPng.com_snake-tail-png_4344698.png" />
+               </image>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="0.9241379499435425" green="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="Player2" fitHeight="33.0" fitWidth="45.0" layoutX="734.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PicsArt_12-07-01.41.02.png" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="Player1" fitHeight="33.0" fitWidth="45.0" layoutX="734.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@PicsArt_12-07-01.41.07.png" />
+               </image>
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect>
+            </ImageView>
+            <Label fx:id="Player1name" layoutX="651.0" layoutY="278.0" text="Label" textFill="#00c8ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="HandArrow" fitHeight="60.0" fitWidth="66.0" layoutX="654.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@kisspng-hand-index-finger-font-awesome-click-5ac903555f8ea1.8160635715231230293914.png" />
+               </image>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color red="1.0" blue="0.3471265435218811" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <rotationAxis>
+                  <Point3D y="1.0" />
+               </rotationAxis>
+            </ImageView>
+            <ImageView fx:id="four" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="722.0" layoutY="314.0" onMousePressed="#throwDice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202021-12-18%20at%208.52.26%20PM.jpeg" />
+               </image>
+               <rotationAxis>
+                  <Point3D x="1.0" y="1.0" z="1.0" />
+               </rotationAxis>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="one" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="722.0" layoutY="314.0" onMousePressed="#throwDice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202021-12-18%20at%208.52.27%20PM%20(1).jpeg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="two" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="722.0" layoutY="314.0" onMousePressed="#throwDice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202021-12-18%20at%208.52.29%20PM.jpeg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="three" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="722.0" layoutY="314.0" onMousePressed="#throwDice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202021-12-18%20at%208.52.28%20PM.jpeg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="five" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="722.0" layoutY="314.0" onMousePressed="#throwDice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202021-12-18%20at%208.52.28%20PM%20(1).jpeg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="six" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" layoutX="722.0" layoutY="314.0" onMousePressed="#throwDice" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@WhatsApp%20Image%202021-12-18%20at%208.52.27%20PM.jpeg" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <Label fx:id="Player2name" layoutX="651.0" layoutY="368.0" text="Label" textFill="#ffb200">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Pane fx:id="pane" layoutX="135.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@pexels-artem-saranin-1547813.jpg" />
+                     </image>
+                     <effect>
+                        <InnerShadow choke="0.67" height="152.01" radius="75.505" width="152.01">
+                           <input>
+                              <Shadow />
+                           </input>
+                           <color>
+                              <Color red="0.5862069725990295" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="Congo" layoutX="35.0" layoutY="289.0" prefHeight="35.0" prefWidth="342.0" text="C O N G R A T U L A T I O N S !" textFill="#ff00ca">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow>
+                                 <color>
+                                    <Color green="0.6488503813743591" blue="1.0" />
+                                 </color>
+                              </Shadow>
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect></Label>
+                  <ImageView fx:id="ImagePlayer11" fitHeight="150.0" fitWidth="200.0" layoutX="127.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Snake-Tattoo-Free-Download-PNG.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.4399999976158142" green="0.7373793721199036" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="ImagePlayer21" fitHeight="150.0" fitWidth="200.0" layoutX="134.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@PikPng.com_snake-tail-png_4344698.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="1.0" blue="0.09913793206214905" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </ImageView>
+                  <Button layoutX="129.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchtoMainMenu" prefHeight="35.0" prefWidth="142.0" text="M A I N  M E N U">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                              </Light.Distant>
+                           </light>
+                        </Lighting>
+                     </effect></Button>
+                  <Label fx:id="WinningTextP1" layoutX="141.0" layoutY="53.0" text="Label" textFill="#00c8ff">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="WinningTextP2" layoutX="141.0" layoutY="53.0" text="Label" textFill="#ffb200">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Player1name1" layoutX="85.0" layoutY="262.0" text="Label" textFill="#00c8ff">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Player2name1" layoutX="85.0" layoutY="262.0" text="Label" textFill="#ffb200">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
